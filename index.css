@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap');
+
+:root {
+    /*  COLOR  */
+    --color-primary-1: hsl(223, 87%, 63%);
+
+    --color-secondary-1: hsl(223, 100%, 88%);
+    --color-secondary-2: hsl(354, 100%, 66%);
+
+    --color-neutral-1: hsl(0, 0%, 59%);
+    --color-neutral-2: hsl(209, 33%, 12%);
+
+    /*  FONT  */
+    --font-size: 1.25em;
+    --font-light: 300;
+    --font-semibold: 600;
+    --font-bold: 700;
+}
+
+*. *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+html {
+    color: var(--color-neutral-2);
+    font-family: "Libre Franklin", sans-serif;
+    font-size: var(--font-size);
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    width: 100%;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.landing-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.brand-logo {
+    width: 3rem;
+    padding-block: 2rem;
+}
+
+.landing-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.content__title {
+    color: var(--color-neutral-1);
+    font-weight: var(--font-light);
+    font-size: clamp(1.25rem, 0.8099rem + 1.8779vw, 2.5rem);
+}
+
+.content__title span {
+    color: var(--color-neutral-2);
+    font-weight: var(--font-bold);
+}
+
+.email-form {
+    width: 100%;
+}
+
+.input-group {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 1rem;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.email-input {
+    border: 2px solid var(--color-secondary-1);
+    border-radius: 99999px;
+    padding: 0.5rem 1.5rem;
+    outline: none;
+}
+
+.submit-button {
+    color: #fff;
+    font-weight: var(--font-semibold);
+    background: var(--color-primary-1);
+    border: none;
+    border-radius: 9999px;
+    padding: 0.5rem 1.5rem;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+.email-input, .submit-button {
+}
+
+.submit-button:hover {
+    background: hsl(223, 100%, 70%);
+}
+
+.socials {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+    padding-block: 1rem;
+    margin-top: 4rem;
+}
+
+.social-links  {
+    color: var(--color-primary-1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.social-links a {
+    border: 1px solid var(--color-secondary-1);
+    border-radius: 9999px;
+    padding: 0.5rem;
+    width: 1rem;
+    height:1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.fa-facebook-f, .fa-twitter, .fa-instagram, .fa-youtube {
+    color: var(--color-primary-1);
+}
+
+.socials span {
+    color: var(--color-neutral-1);
+    font-size: 0.75em;
+}
+
+@media only screen and (min-width: 320px) {
+    .wrapper {
+        margin: 4rem 1rem;
+    }
+
+    .input-group {
+        flex-direction: column;
+    }
+}
+
+@media only screen and (min-width: 480px) {
+    .wrapper {
+        margin-inline: 2rem;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .wrapper {
+        margin: 0 10%;
+    }
+
+    .main-container {
+        max-width: 600px;
+    }
+
+    .input-group {
+        flex-direction: row;
+        align-items: start;
+        gap: 0.5rem;
+    }
+
+    .input-container {
+        align-items: stretch;
+        flex-basis: 66%;
+    }
+
+    .input-container span {
+        align-self: start;
+        padding-left: 1.5rem;
+    }
+
+    .submit-button {
+        flex-basis: 33%;
+    }
+}
